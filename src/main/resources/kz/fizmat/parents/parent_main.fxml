@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx" fx:controller="kz.fizmat.parents.main.ParentMainController">
+
+    <content>
+        <VBox alignment="TOP_CENTER" styleClass="mainroot" stylesheets="@../css/teacher_main.css">
+
+
+            <HBox style="-fx-background-color: #2D75E8">
+
+                <children>
+                    <Label layoutX="73.0" layoutY="30.0" text="Родители" textFill="WHITE">
+                        <font>
+                            <Font size="48.0" />
+                        </font>
+                        <HBox.margin>
+                            <Insets bottom="35.0" left="50.0" top="35.0" />
+                        </HBox.margin>
+                    </Label>
+
+                </children>
+
+            </HBox>
+            <HBox alignment="CENTER">
+                <children>
+
+                    <VBox alignment="CENTER" style="-fx-background-color: #3A84C3; -fx-background-radius: 1.5em;">
+                        <children>
+                            <Label alignment="CENTER" layoutX="72.0" layoutY="20.0" text="500" textFill="WHITE">
+                                <font>
+                                    <Font name="System Bold" size="28.0" />
+                                </font>
+                                <VBox.margin>
+                                    <Insets left="30.0" right="30.0" top="7.0" />
+                                </VBox.margin>
+                            </Label>
+                            <Label alignment="CENTER" layoutX="62.0" layoutY="65.0" text="Total Students" textFill="WHITE">
+                                <font>
+                                    <Font size="13.0" />
+                                </font>
+                                <VBox.margin>
+                                    <Insets bottom="7.0" left="30.0" right="30.0" />
+                                </VBox.margin>
+                            </Label>
+                        </children>
+                        <HBox.margin>
+                            <Insets left="30.0" right="30.0" />
+                        </HBox.margin>
+                    </VBox>
+
+                    <VBox alignment="CENTER" style="-fx-background-color: #EEAC4C; -fx-background-radius: 1.5em;" GridPane.columnIndex="1">
+                        <children>
+                            <Label layoutX="59.0" layoutY="25.0" text="1000" textFill="WHITE">
+                                <font>
+                                    <Font name="System Bold" size="28.0" />
+                                </font>
+                                <VBox.margin>
+                                    <Insets left="30.0" right="30.0" top="7.0" />
+                                </VBox.margin>
+                            </Label>
+                            <Label layoutX="67.0" layoutY="70.0" text="Total Hours" textFill="WHITE">
+                                <font>
+                                    <Font size="13.0" />
+                                </font>
+                                <VBox.margin>
+                                    <Insets bottom="7.0" left="30.0" right="30.0" />
+                                </VBox.margin>
+                            </Label>
+                        </children>
+                        <HBox.margin>
+                            <Insets left="30.0" right="30.0" />
+                        </HBox.margin>
+                    </VBox>
+
+                    <VBox alignment="CENTER" style="-fx-background-color: #5CB55B; -fx-background-radius: 1.5em;" GridPane.columnIndex="2">
+                        <children>
+                            <Label layoutX="79.0" layoutY="25.0" text="10" textFill="WHITE">
+                                <font>
+                                    <Font name="System Bold" size="28.0" />
+                                </font>
+                                <VBox.margin>
+                                    <Insets left="30.0" right="30.0" top="7.0" />
+                                </VBox.margin>
+                            </Label>
+                            <Label layoutX="62.0" layoutY="70.0" text="Total Lessons" textFill="WHITE">
+                                <font>
+                                    <Font size="13.0" />
+                                </font>
+                                <VBox.margin>
+                                    <Insets bottom="7.0" left="30.0" right="30.0" />
+                                </VBox.margin>
+                            </Label>
+                        </children>
+                        <HBox.margin>
+                            <Insets left="30.0" right="30.0" />
+                        </HBox.margin>
+                    </VBox>
+
+                    <VBox alignment="CENTER" style="-fx-background-color: #D7534E; -fx-background-radius: 1.5em;" GridPane.columnIndex="3">
+                        <children>
+                            <Label layoutX="90.0" layoutY="25.0" text="2" textFill="WHITE">
+                                <font>
+                                    <Font name="System Bold" size="28.0" />
+                                </font>
+                                <VBox.margin>
+                                    <Insets left="30.0" right="30.0" top="7.0" />
+                                </VBox.margin>
+                            </Label>
+                            <Label layoutX="57.0" layoutY="70.0" text="Missed Classes" textFill="WHITE">
+                                <font>
+                                    <Font size="13.0" />
+                                </font>
+                                <VBox.margin>
+                                    <Insets bottom="7.0" left="30.0" right="30.0" />
+                                </VBox.margin>
+                            </Label>
+                        </children>
+                        <HBox.margin>
+                            <Insets left="30.0" right="30.0" />
+                        </HBox.margin>
+                    </VBox>
+                </children>
+                <VBox.margin>
+                    <Insets bottom="15.0" top="23.0" />
+                </VBox.margin>
+            </HBox>
+
+            <HBox alignment="CENTER" fillHeight="false" layoutX="61.0" layoutY="59.0">
+                <children>
+                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../../../images/search.png" />
+                        <HBox.margin>
+                            <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                        </HBox.margin>
+                    </ImageView>
+                    <TextField fx:id="filterParentTextField" onKeyPressed="#onFilterParentKeyPressed">
+                        <styleClass>
+                            <String fx:value="graybackground" />
+                            <String fx:value="searchfilter" />
+                        </styleClass>
+                        <HBox.margin>
+                            <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                        </HBox.margin>
+                    </TextField>
+                    <ComboBox fx:id="filterOptionComboBox">
+                        <styleClass>
+                            <String fx:value="graybackground" />
+                            <String fx:value="searchfilter" />
+                        </styleClass>
+                        <HBox.margin>
+                            <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                        </HBox.margin>
+                    </ComboBox>
+                    <VBox alignment="CENTER" prefHeight="35.0" prefWidth="35.0" styleClass="imges">
+                        <children>
+                            <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="6.0" layoutY="3.0" onMouseClicked="#onRefreshClicked" pickOnBounds="true" preserveRatio="true">
+                                <Image url="@../../../images/refresh.png" />
+                            </ImageView>
+                        </children>
+                        <HBox.margin>
+                            <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                        </HBox.margin>
+                    </VBox>
+                    <VBox alignment="CENTER" prefHeight="35.0" prefWidth="35.0" styleClass="imges">
+                        <children>
+                            <ImageView fx:id="deleteBtn" fitHeight="28.0" fitWidth="28.0" layoutY="20.0" onMouseClicked="#onDeleteRowClicked" pickOnBounds="true" preserveRatio="true">
+                                <Image url="@../../../images/delete.png" />
+                            </ImageView>
+                        </children>
+                        <HBox.margin>
+                            <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                        </HBox.margin>
+                    </VBox>
+                    <VBox alignment="CENTER" prefHeight="35.0" prefWidth="35.0" styleClass="imges">
+                        <children>
+                            <ImageView fitHeight="28.0" fitWidth="28.0" onMouseClicked="#onAddNewParent" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../../../images/add.png" />
+                                </image>
+                            </ImageView>
+                        </children>
+                        <HBox.margin>
+                            <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                        </HBox.margin>
+                    </VBox>
+                </children>
+                <VBox.margin>
+                    <Insets top="5.0" />
+                </VBox.margin>
+            </HBox>
+            <StackPane layoutX="25.0" layoutY="144.0" VBox.vgrow="ALWAYS">
+                <children>
+
+
+                    <TableView fx:id="table" tableMenuButtonVisible="true" StackPane.alignment="CENTER">
+                        <placeholder>
+                            <Label text="" />
+                        </placeholder>
+
+                        <columns>
+                            <TableColumn fx:id="idColumn" prefWidth="45.0" text="ID">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="id" />
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn fx:id="nameColumn" prefWidth="75.0" style="-fx-alignment: CENTER;" text="Имя">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="name" />
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn fx:id="surnameColumn" prefWidth="75.0" text="Фамилия">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="surname" />
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn fx:id="patronymicColumn" prefWidth="75.0" text="Отчество">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="patronymic" />
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn fx:id="genderColumn" prefWidth="75.0" text="Пол">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="gender" />
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn fx:id="nationalityColumn" prefWidth="75.0" text="Нац">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="nationality" />
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn fx:id="birthDateColumn" prefWidth="75.0" text="Дата рождения">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="birthDate" />
+                                </cellValueFactory>
+                            </TableColumn>
+
+                        </columns>
+                        <StackPane.margin>
+                            <Insets bottom="40.0" left="40.0" right="40.0" top="25.0" />
+                        </StackPane.margin>
+                  <stylesheets>
+                     <URL value="@../css/fullpackstyling.css" />
+                     <URL value="@../css/tablemain.css" />
+                  </stylesheets>
+                    </TableView>
+                    <ProgressIndicator fx:id="progress" prefHeight="18.0" prefWidth="6.0" visible="false" />
+                </children>
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
+            </StackPane>
+
+
+
+
+        </VBox>
+    </content>
+</ScrollPane>

@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kz.fizmat.teachers.main.TeacherMainController">
+
+   <content>
+      <VBox alignment="TOP_CENTER" styleClass="mainroot" stylesheets="@../css/teacher_main.css">
+
+
+         <HBox style="-fx-background-color: #2D75E8">
+
+              <children>
+                  <Label layoutX="73.0" layoutY="30.0" text="Учителя" textFill="WHITE">
+                      <font>
+                          <Font size="48.0" />
+                      </font>
+                  <HBox.margin>
+                     <Insets bottom="35.0" left="50.0" top="35.0" />
+                  </HBox.margin>
+                  </Label>
+
+              </children>
+
+          </HBox>
+         <HBox alignment="CENTER">
+            <children>
+
+                <VBox alignment="CENTER" style="-fx-background-color: #3A84C3; -fx-background-radius: 1.5em;">
+                    <children>
+                        <Label alignment="CENTER" layoutX="72.0" layoutY="20.0" text="500" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="28.0" />
+                            </font>
+                        <VBox.margin>
+                           <Insets left="30.0" right="30.0" top="7.0" />
+                        </VBox.margin>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="62.0" layoutY="65.0" text="Total Students" textFill="WHITE">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        <VBox.margin>
+                           <Insets bottom="7.0" left="30.0" right="30.0" />
+                        </VBox.margin>
+                        </Label>
+                    </children>
+                  <HBox.margin>
+                     <Insets left="30.0" right="30.0" />
+                  </HBox.margin>
+                </VBox>
+
+                <VBox alignment="CENTER" style="-fx-background-color: #EEAC4C; -fx-background-radius: 1.5em;" GridPane.columnIndex="1">
+                    <children>
+                        <Label layoutX="59.0" layoutY="25.0" text="1000" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="28.0" />
+                            </font>
+                        <VBox.margin>
+                           <Insets left="30.0" right="30.0" top="7.0" />
+                        </VBox.margin>
+                        </Label>
+                        <Label layoutX="67.0" layoutY="70.0" text="Total Hours" textFill="WHITE">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        <VBox.margin>
+                           <Insets bottom="7.0" left="30.0" right="30.0" />
+                        </VBox.margin>
+                        </Label>
+                    </children>
+                  <HBox.margin>
+                     <Insets left="30.0" right="30.0" />
+                  </HBox.margin>
+                </VBox>
+
+                <VBox alignment="CENTER" style="-fx-background-color: #5CB55B; -fx-background-radius: 1.5em;" GridPane.columnIndex="2">
+                    <children>
+                        <Label layoutX="79.0" layoutY="25.0" text="10" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="28.0" />
+                            </font>
+                        <VBox.margin>
+                           <Insets left="30.0" right="30.0" top="7.0" />
+                        </VBox.margin>
+                        </Label>
+                        <Label layoutX="62.0" layoutY="70.0" text="Total Lessons" textFill="WHITE">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        <VBox.margin>
+                           <Insets bottom="7.0" left="30.0" right="30.0" />
+                        </VBox.margin>
+                        </Label>
+                    </children>
+                  <HBox.margin>
+                     <Insets left="30.0" right="30.0" />
+                  </HBox.margin>
+                </VBox>
+
+                <VBox alignment="CENTER" style="-fx-background-color: #D7534E; -fx-background-radius: 1.5em;" GridPane.columnIndex="3">
+                    <children>
+                        <Label layoutX="90.0" layoutY="25.0" text="2" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="28.0" />
+                            </font>
+                        <VBox.margin>
+                           <Insets left="30.0" right="30.0" top="7.0" />
+                        </VBox.margin>
+                        </Label>
+                        <Label layoutX="57.0" layoutY="70.0" text="Missed Classes" textFill="WHITE">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        <VBox.margin>
+                           <Insets bottom="7.0" left="30.0" right="30.0" />
+                        </VBox.margin>
+                        </Label>
+                    </children>
+                  <HBox.margin>
+                     <Insets left="30.0" right="30.0" />
+                  </HBox.margin>
+                </VBox>
+            </children>
+            <VBox.margin>
+               <Insets bottom="15.0" top="23.0" />
+            </VBox.margin>
+         </HBox>
+
+         <HBox alignment="CENTER" fillHeight="false" layoutX="61.0" layoutY="59.0">
+            <children>
+                <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../../../images/search.png" />
+                  <HBox.margin>
+                     <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                  </HBox.margin>
+                </ImageView>
+                <TextField fx:id="filterTeacherTextField" onKeyPressed="#onFilterTeacherKeyPressed">
+                  <styleClass>
+                     <String fx:value="graybackground" />
+                     <String fx:value="searchfilter" />
+                  </styleClass>
+                  <HBox.margin>
+                     <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                  </HBox.margin>
+               </TextField>
+                <ComboBox fx:id="filterOptionComboBox">
+                  <styleClass>
+                     <String fx:value="graybackground" />
+                     <String fx:value="searchfilter" />
+                  </styleClass>
+                  <HBox.margin>
+                     <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                  </HBox.margin>
+               </ComboBox>
+               <VBox alignment="CENTER" prefHeight="35.0" prefWidth="35.0" styleClass="imges">
+                  <children>
+                      <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="6.0" layoutY="3.0" onMouseClicked="#onRefreshClicked" pickOnBounds="true" preserveRatio="true">
+                          <Image url="@../../../images/refresh.png" />
+                      </ImageView>
+                  </children>
+                  <HBox.margin>
+                     <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                  </HBox.margin>
+               </VBox>
+               <VBox alignment="CENTER" prefHeight="35.0" prefWidth="35.0" styleClass="imges">
+                  <children>
+                      <ImageView fx:id="deleteBtn" fitHeight="28.0" fitWidth="28.0" layoutY="20.0" onMouseClicked="#onDeleteRowClicked" pickOnBounds="true" preserveRatio="true">
+                          <Image url="@../../../images/delete.png" />
+                      </ImageView>
+                  </children>
+                  <HBox.margin>
+                     <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                  </HBox.margin>
+               </VBox>
+               <VBox alignment="CENTER" prefHeight="35.0" prefWidth="35.0" styleClass="imges">
+                  <children>
+                     <ImageView fitHeight="28.0" fitWidth="28.0" onMouseClicked="#onAddNewTeacher" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../images/add.png" />
+                        </image>
+                     </ImageView>
+                  </children>
+                  <HBox.margin>
+                     <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                  </HBox.margin>
+               </VBox>
+            </children>
+            <VBox.margin>
+               <Insets top="5.0" />
+            </VBox.margin>
+         </HBox>
+         <StackPane layoutX="25.0" layoutY="144.0" VBox.vgrow="ALWAYS">
+            <children>
+      
+      
+                <TableView fx:id="table" tableMenuButtonVisible="true" StackPane.alignment="CENTER">
+                    <placeholder>
+                        <Label text="" />
+                    </placeholder>
+
+                    <columns>
+                        <TableColumn fx:id="idColumn" text="ID">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="id" />
+                            </cellValueFactory>
+                            <styleClass>
+                                <String fx:value="pref-width-small" />
+                            </styleClass>
+                        </TableColumn>
+                        <TableColumn fx:id="nameColumn" text="Имя">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="name" />
+                            </cellValueFactory>
+<!--                            <styleClass>-->
+<!--                                <String fx:value="pref-width-large" />-->
+<!--                            </styleClass>-->
+                        </TableColumn>
+                        <TableColumn fx:id="surnameColumn" text="Фамилия">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="surname" />
+                            </cellValueFactory>
+                            <styleClass>
+                                <String fx:value="pref-width-large" />
+                            </styleClass>
+                        </TableColumn>
+                        <TableColumn fx:id="patronymicColumn" text="Отчество">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="patronymic" />
+                            </cellValueFactory>
+
+                            <styleClass>
+                                <String fx:value="pref-width-large" />
+                            </styleClass>
+                        </TableColumn>
+                        <TableColumn fx:id="genderColumn" text="Пол">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="gender" />
+                            </cellValueFactory>
+                            <styleClass>
+                                <String fx:value="pref-width-small" />
+                            </styleClass>
+                        </TableColumn>
+                        <TableColumn fx:id="nationalityColumn" text="Нац">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="nationality" />
+                            </cellValueFactory>
+                            <styleClass>
+                                <String fx:value="pref-width-small" />
+                            </styleClass>
+                        </TableColumn>
+                        <TableColumn fx:id="birthDateColumn" text="Дата рождения">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="birthDate" />
+                            </cellValueFactory>
+                            <styleClass>
+                                <String fx:value="pref-width-small" />
+                            </styleClass>
+                        </TableColumn>
+                        <TableColumn fx:id="educationColumn" text="Образование">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="education" />
+                            </cellValueFactory>
+                            <styleClass>
+                                <String fx:value="pref-width-medium" />
+                            </styleClass>
+                        </TableColumn>
+                        <TableColumn fx:id="qualificationColumn" text="Квалификация">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="qualification" />
+                            </cellValueFactory>
+                            <styleClass>
+                                <String fx:value="pref-width-medium" />
+                            </styleClass>
+                        </TableColumn>
+                        <TableColumn fx:id="qualificationDateColumn" text="Дата получения квалификации">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="qualificationDate" />
+                            </cellValueFactory>
+                            <styleClass>
+                                <String fx:value="pref-width-small" />
+                            </styleClass>
+                        </TableColumn>
+
+                        <TableColumn fx:id="isGraduatedColumn" text="Окончил ВУЗ">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="graduated" />
+                            </cellValueFactory>
+                            <styleClass>
+                                <String fx:value="pref-width-small" />
+                            </styleClass>
+                        </TableColumn>
+                        <TableColumn fx:id="pedagogicalExperienceColumn" text="Педстаж">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="pedagogicalExperience" />
+                            </cellValueFactory>
+                            <styleClass>
+                                <String fx:value="pref-width-small" />
+                            </styleClass>
+                        </TableColumn>
+                        <TableColumn fx:id="generalExperienceColumn" text="Общий стаж">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="generalExperience" />
+                            </cellValueFactory>
+                            <styleClass>
+                                <String fx:value="pref-width-small" />
+                            </styleClass>
+                        </TableColumn>
+                        <TableColumn fx:id="categoryColumn" text="Категория">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="category" />
+                            </cellValueFactory>
+                            <styleClass>
+                                <String fx:value="pref-width-medium" />
+                            </styleClass>
+                        </TableColumn>
+                        <TableColumn fx:id="teachesInGradesColumn" text="В классах">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="teachesInGrades" />
+                            </cellValueFactory>
+                            <styleClass>
+                                <String fx:value="pref-width-medium" />
+                            </styleClass>
+                        </TableColumn>
+                        <TableColumn fx:id="isFullTimeEmployeeColumn" text="Штатный/Совместитель">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="fullTimeEmployee" />
+                            </cellValueFactory>
+                            <styleClass>
+                                <String fx:value="pref-width-small" />
+                            </styleClass>
+                        </TableColumn>
+                        <TableColumn fx:id="maritalStatusColumn" text="Семейное положение">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="maritalStatus" />
+                            </cellValueFactory>
+                            <styleClass>
+                                <String fx:value="pref-width-small" />
+                            </styleClass>
+                        </TableColumn>
+                        <TableColumn fx:id="numberOfChildrenColumn" text="Колво детей">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="numberOfChildren" />
+                            </cellValueFactory>
+                            <styleClass>
+                                <String fx:value="pref-width-small" />
+                            </styleClass>
+                        </TableColumn>
+                        <TableColumn fx:id="awardsColumn" text="Награды">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="awards" />
+                            </cellValueFactory>
+                            <styleClass>
+                                <String fx:value="pref-width-medium" />
+                            </styleClass>
+                        </TableColumn>
+                    </columns>
+                  <StackPane.margin>
+                     <Insets bottom="40.0" left="40.0" right="40.0" top="25.0" />
+                  </StackPane.margin>
+                  <stylesheets>
+                     <URL value="@../css/fullpackstyling.css" />
+                     <URL value="@../css/tablemain.css" />
+                  </stylesheets>
+                </TableView>
+               <ProgressIndicator fx:id="progress" maxHeight="-Infinity" maxWidth="-Infinity" visible="false" />
+            </children>
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+         </StackPane>
+      
+      
+      
+      
+      </VBox>
+   </content>
+</ScrollPane>

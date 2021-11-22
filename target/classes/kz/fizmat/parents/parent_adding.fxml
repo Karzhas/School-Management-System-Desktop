@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" stylesheets="@../css/teacher_adding.css"
+            xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx"
+            fx:controller="kz.fizmat.parents.adding.ParentAddingController">
+    <StackPane fx:id="stackPane" styleClass="root">
+        <VBox alignment="CENTER" fillWidth="false" prefHeight="1000.0" prefWidth="500.0">
+            <TextField fx:id="surnameFX" alignment="CENTER" layoutX="88.0" layoutY="69.0" promptText="Фамилия"
+                       styleClass="textfield-focus">
+                <VBox.margin>
+                    <Insets bottom="9.0" top="40.0"/>
+                </VBox.margin>
+            </TextField>
+            <TextField fx:id="nameFX" alignment="CENTER" layoutX="88.0" layoutY="127.0" promptText="Имя"
+                       styleClass="textfield-focus">
+                <VBox.margin>
+                    <Insets bottom="9.0" top="9.0"/>
+                </VBox.margin>
+            </TextField>
+            <TextField fx:id="patronymicFX" alignment="CENTER" layoutX="88.0" layoutY="183.0"
+                       promptText="Отчество" styleClass="textfield-focus">
+                <VBox.margin>
+                    <Insets bottom="9.0" top="9.0"/>
+                </VBox.margin>
+            </TextField>
+            <DatePicker fx:id="birthDateFX" layoutX="88.0" layoutY="244.0" promptText="Дата рождения">
+                <VBox.margin>
+                    <Insets bottom="9.0" top="9.0"/>
+                </VBox.margin>
+            </DatePicker>
+            <HBox alignment="TOP_CENTER">
+                <VBox.margin>
+                    <Insets bottom="9.0" top="9.0"/>
+                </VBox.margin>
+                <RadioButton fx:id="genderMaleFX" mnemonicParsing="false" text="мужской">
+                    <HBox.margin>
+                        <Insets left="9.0" right="9.0"/>
+                    </HBox.margin>
+                </RadioButton>
+                <RadioButton fx:id="genderFemaleFX" mnemonicParsing="false" text="женский">
+                    <HBox.margin>
+                        <Insets left="9.0" right="9.0"/>
+                    </HBox.margin>
+                </RadioButton>
+            </HBox>
+            <TextField fx:id="nationalityFX" alignment="CENTER" layoutX="88.0" layoutY="350.0"
+                       promptText="Национальность" styleClass="textfield-focus">
+                <VBox.margin>
+                    <Insets bottom="9.0" top="9.0"/>
+                </VBox.margin>
+            </TextField>
+
+
+            <HBox>
+                <VBox.margin>
+                    <Insets bottom="20.0" top="20.0"/>
+                </VBox.margin>
+                <Button fx:id="cancelFX" mnemonicParsing="false" onAction="#onCancel" styleClass="cancel"
+                        text="Отмена">
+                    <HBox.margin>
+                        <Insets left="25.0" right="25.0"/>
+                    </HBox.margin>
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="addFX" mnemonicParsing="false" onAction="#onAddParent" styleClass="add"
+                        text="Добавить">
+                    <HBox.margin>
+                        <Insets left="25.0" right="25.0"/>
+                    </HBox.margin>
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                </Button>
+            </HBox>
+        </VBox>
+        <ProgressIndicator fx:id="progress" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="83.0"
+                           prefWidth="200.0" visible="false" StackPane.alignment="CENTER"/>
+    </StackPane>
+</ScrollPane>

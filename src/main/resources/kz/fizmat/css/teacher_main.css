@@ -1,0 +1,38 @@
+.imges{
+    -fx-background-color:  #f3f5f7;
+}
+
+.mainroot
+{
+    -fx-background-color: #FFFFFF;
+}
+
+.graybackground{
+    -fx-background-color:  #e8ebf0;
+}
+
+.table-view .table-cell{
+    -fx-alignment: CENTER;
+}
+
+.labelteacher{
+    -fx-text-fill: #26444c;
+    -fx-font-size: 17px;
+    -fx-font-family: "Californian FB";
+}
+
+.textfieldteacher{
+    -fx-text-fill: black;
+    -fx-font-size: 16px;
+
+}
+
+.searchfilter{
+    -fx-text-fill: black;
+    -fx-font-size: 20px;
+}
+
+/*.table-cell{*/
+/*    -fx-font-size: 17px;*/
+/*    -fx-text-fill: red ;*/
+/*}*/

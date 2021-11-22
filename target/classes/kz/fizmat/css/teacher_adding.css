@@ -1,0 +1,26 @@
+
+.textfield-focus {
+    -fx-font-size: 14;
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: grey;
+    -fx-border-radius: 5,5;
+}
+
+.textfield-focus:focused {
+    -fx-border-color: #2D75E8;
+    -fx-border-radius: 5,5;
+
+}
+
+.root{
+    -fx-background-color:derive( #2D75E8,95%);
+}
+
+.add{
+    -fx-background-color: #4CAF50; /* Green */
+    -fx-text-fill: white;
+}
+.cancel{
+    -fx-background-color: #cd3b3b;
+    -fx-text-fill: white;
+}
